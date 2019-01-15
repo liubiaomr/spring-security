@@ -50,21 +50,21 @@ public interface UserDetails extends Serializable {
 	 *
 	 * @return the authorities, sorted by natural key (never <code>null</code>)
 	 */
-	Collection<? extends GrantedAuthority> getAuthorities();
+	Collection<? extends GrantedAuthority> getAuthorities(); //????
 
 	/**
 	 * Returns the password used to authenticate the user.
 	 *
 	 * @return the password
 	 */
-	String getPassword();
+	String getPassword(); //密码
 
 	/**
 	 * Returns the username used to authenticate the user. Cannot return <code>null</code>.
 	 *
 	 * @return the username (never <code>null</code>)
 	 */
-	String getUsername();
+	String getUsername(); //用户名
 
 	/**
 	 * Indicates whether the user's account has expired. An expired account cannot be
@@ -73,7 +73,7 @@ public interface UserDetails extends Serializable {
 	 * @return <code>true</code> if the user's account is valid (ie non-expired),
 	 * <code>false</code> if no longer valid (ie expired)
 	 */
-	boolean isAccountNonExpired();
+	boolean isAccountNonExpired(); //账户未过期
 
 	/**
 	 * Indicates whether the user is locked or unlocked. A locked user cannot be
@@ -81,7 +81,7 @@ public interface UserDetails extends Serializable {
 	 *
 	 * @return <code>true</code> if the user is not locked, <code>false</code> otherwise
 	 */
-	boolean isAccountNonLocked();
+	boolean isAccountNonLocked(); //账户没有被锁定
 
 	/**
 	 * Indicates whether the user's credentials (password) has expired. Expired
@@ -90,7 +90,7 @@ public interface UserDetails extends Serializable {
 	 * @return <code>true</code> if the user's credentials are valid (ie non-expired),
 	 * <code>false</code> if no longer valid (ie expired)
 	 */
-	boolean isCredentialsNonExpired();
+	boolean isCredentialsNonExpired(); //证书没有过期
 
 	/**
 	 * Indicates whether the user is enabled or disabled. A disabled user cannot be
@@ -98,5 +98,5 @@ public interface UserDetails extends Serializable {
 	 *
 	 * @return <code>true</code> if the user is enabled, <code>false</code> otherwise
 	 */
-	boolean isEnabled();
+	boolean isEnabled(); //账户是否有效
 }
